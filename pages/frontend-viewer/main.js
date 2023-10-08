@@ -20,10 +20,41 @@ import {
 } from './vendor/three-mesh-bvh/three-mesh-bvh.js';
 
 
-// The `Streamlit` object exists because our html file includes
-// `streamlit-component-lib.js`.
-// If you get an error about "Streamlit" not being defined, that
-// means you're missing that file.
+function sendMessageToStreamlitClient(type, data) {
+  console.log(type, data)
+  const outData = Object.assign({
+      isStreamlitMessage: true,
+      type: type,
+  }, data);
+  window.parent.postMessage(outData, "*");
+}
+
+const Streamlit = {
+    setComponentReady: function() {
+        sendMessageToStreamlitClient("streamlit:componentReady", {apiVersion: 1});
+    },
+    setFrameHeight: function(height) {
+        sendMessageToStreamlitClient("streamlit:setFrameHeight", {height: height});
+    },
+    setComponentValue: function(value) {
+        sendMessageToStreamlitClient("streamlit:setComponentValue", {value: value});
+    },
+    RENDER_EVENT: "streamlit:render",
+    loadViewer: function(callback) { 
+          callback()
+      },
+    events: {
+        addEventListener: function(type, callback) { 
+            window.addEventListener("message", function(event) {
+                if (event.data.type === type) {
+                    event.detail = event.data
+                    callback(event);
+                }
+            });
+        }
+    }
+}
+
 
 const ifcModels = [];
 const ifcLoader = new IFCLoader();
