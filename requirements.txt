@@ -1,5 +1,5 @@
 streamlit
-https://miljoteknik.structor.se/projekt/ifcopenshell#egg=ifcopenshell
+https://miljoteknik.structor.se/projekt/ifcopenshell/ifcopenshell#egg=ifcopenshell
 matplotlib
 plotly
 pandas
