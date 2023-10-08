@@ -1,5 +1,5 @@
 streamlit
--e https://miljoteknik.structor.se/projekt/ifcopenshell/ifcopenshell-python-310-v0.7.0-f0e03c7-linux64.zip#egg=ifcopenshell
+https://miljoteknik.structor.se/projekt/ifcopenshell#egg=ifcopenshell
 matplotlib
 plotly
 pandas
