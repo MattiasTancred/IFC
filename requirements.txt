@@ -1,6 +1,7 @@
 streamlit
-ifcopenshell
+https://drive.google.com/drive/folders/1HQ2DYUXwc0Z5YQnapJIhSnxD7UCFvFTe?usp=sharing
 matplotlib
 plotly
 pandas
 xlsxwriter
+lark-parser
