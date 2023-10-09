@@ -1,5 +1,5 @@
 streamlit
-https://github.com/MattiasTancred/IFC/raw/main/ifcopenshell-0.7.0.230918-py310-none-manylinux_2_31_x86_64.whl
+ifcopenshell==0.7.0
 matplotlib
 plotly
 pandas
