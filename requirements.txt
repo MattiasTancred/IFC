@@ -1,5 +1,5 @@
 streamlit
-https://drive.google.com/drive/folders/1HQ2DYUXwc0Z5YQnapJIhSnxD7UCFvFTe?usp=sharing
+https://github.com/MattiasTancred/IFC/raw/main/ifcopenshell-0.7.0.230918-py310-none-manylinux_2_31_x86_64.whl
 matplotlib
 plotly
 pandas
